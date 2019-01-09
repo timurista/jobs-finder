@@ -55,3 +55,9 @@ Drawer (good when you want sidebar)
 Tab navigation mutually exclusive screens
 
 - stack navigator is things are closely related
+
+## Facebook auth setup
+
+get developer account setup: https://docs.expo.io/versions/v32.0.0/sdk/facebook.
+
+Then you get access to `Expo.Facebook.logInWithReadPermissionsAsync(appId, options)`
