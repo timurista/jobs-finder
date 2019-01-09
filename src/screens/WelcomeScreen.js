@@ -16,10 +16,14 @@ const styles = StyleSheet.create({
 });
 
 export default class WelcomeScreen extends Component {
+  onSlidesComplete = () => {
+    this.props.navigation.navigate("auth");
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <Slides data={SLIDE_DATA} />
+        <Slides data={SLIDE_DATA} onComplete={this.onSlidesComplete} />
       </View>
     );
   }
