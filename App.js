@@ -4,6 +4,10 @@ import {
   createBottomTabNavigator,
   createAppContainer
 } from "react-navigation";
+import { Provider, connect } from "react-redux";
+import store from "./store";
+import { reduxifyNavigator } from "react-navigation-redux-helpers";
+
 import AuthScreen from "./src/screens/AuthScreen";
 import WelcomeScreen from "./src/screens/WelcomeScreen";
 import MapScreen from "./src/screens/MapScreen";
@@ -35,5 +39,19 @@ const MainNavigator = createBottomTabNavigator({
 });
 
 const App = createAppContainer(MainNavigator);
+// const mapStateToProps = state => ({
+//   state: state.nav
+// });
+// const AppWithNavigationState = connect(mapStateToProps)(App);
+
+// class Root extends React.Component {
+//   render() {
+//     return (
+//       <Provider store={store}>
+//         <AppWithNavigationState />
+//       </Provider>
+//     );
+//   }
+// }
 
 export default App;
